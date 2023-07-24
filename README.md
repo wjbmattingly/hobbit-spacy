@@ -74,3 +74,7 @@ We welcome contributions!
 Hobbit spaCy is released under the [MIT License](LICENSE).
 
 ## Contact
+
+## Data Source
+
+Source for the people can be found [here](https://github.com/juandes/lotr-names-classification)
