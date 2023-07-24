@@ -40,6 +40,28 @@ pip install en-hobbit
 
 Here's a quick example of how to use Hobbit spaCy:
 
+```
+nlp = spacy.load("en_hobbit")
+doc = nlp(text)
+colors = {
+    'HOBBIT': "#ADD8E6",   # Light blue
+    'WIZARD': "#FFC0CB",   # Pink
+    'REALM': "#FFFFE0",    # Light yellow
+    'MAN': "#E6E6FA",      # Lavender
+    'DWARF': "#98FB98",    # Pale green
+    'ELF': "#FFE4B5",      # Moccasin
+    'AINUR': "#FFDAB9"     # Peachpuff
+}
+
+options = {"ents": ['HOBBIT', 'WIZARD', 'REALM', 'MAN', 'DWARF', 'ELF', 'AINUR'], "colors": colors}
+print(doc.spans["ruler"])
+displacy.render(doc, style="ent", options=options)
+```
+
+Expected Output:
+
+![Sample Output](images/sample.JPG)
+
 ## Documentation
 
 
