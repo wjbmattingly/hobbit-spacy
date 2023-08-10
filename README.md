@@ -80,7 +80,7 @@ displacy.render(doc, style="span", options=options)
 
 Expected Output:
 
-![Sample Output](images/sample.JPG)
+![Sample Output](images/sample-output.JPG)
 
 ## Documentation
 
