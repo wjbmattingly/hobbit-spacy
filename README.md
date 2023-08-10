@@ -8,17 +8,27 @@ This is a work-in-progress that is currently being built as a teaching lesson at
 
 ## Features
 
-* EntityRuler
 * SpanRuler
+* merge_spans (Custom Component): identifies overlapping spans that share the same label and merges them into a single span. For example Bilbo (Hobbit) Baggins (Hobbit) becomes Bilbo Baggins (Hobbit)
+* identify_relations (Custom Component): identifies constructions such as Frodo son of Drogo
 
 ### Entities
 
-* REALM
+#### People
 * MAN
 * HOBBIT
 * DWARF
 * ELF
 * AINUR
+
+#### Places
+* CVT (City, Village, Town) -- this includes Bag End
+* REALM -- Sometimes places fall under both CVT and Realm, such as Rivendell
+* MOUNTAIN
+* ROAD
+
+#### Other
+* WEAPON
 
 ### SpanRuler Labels
 
@@ -41,21 +51,31 @@ pip install en-hobbit
 Here's a quick example of how to use Hobbit spaCy:
 
 ```
+import spacy
+from spacy import displacy
+
 nlp = spacy.load("en_hobbit")
+
+with open("texts/council.txt", "r") as f:
+    text = f.read()
 doc = nlp(text)
 colors = {
     'HOBBIT': "#ADD8E6",   # Light blue
-    'WIZARD': "#FFC0CB",   # Pink
+    'CVT': "#FFC0CB",   # Pink
     'REALM': "#FFFFE0",    # Light yellow
     'MAN': "#E6E6FA",      # Lavender
     'DWARF': "#98FB98",    # Pale green
     'ELF': "#FFE4B5",      # Moccasin
-    'AINUR': "#FFDAB9"     # Peachpuff
+    'AINUR': "#FFDAB9",     # Peachpuff
+    'RIVER': "#00FFFF",     # Aqua
+    'MOUNTAIN': "#8B4513",  # SaddleBrown
+    'ROAD': "#808080",      # Gray
+    'RELATION': "#800080"   # Purple
 }
 
-options = {"ents": ['HOBBIT', 'WIZARD', 'REALM', 'MAN', 'DWARF', 'ELF', 'AINUR'], "colors": colors}
-print(doc.spans["ruler"])
-displacy.render(doc, style="ent", options=options)
+options = {"ents": ['HOBBIT', 'CVT', 'REALM', 'MAN', 'DWARF', 'ELF', 'AINUR', "RIVER", "MOUNTAIN", "ROAD", "RELATION"], "colors": colors}
+options["spans_key"] = "main"
+displacy.render(doc, style="span", options=options)
 ```
 
 Expected Output:

@@ -1,0 +1,1 @@
+{"pattern":[{"ENT_TYPE":{"IN":["MAN","ELF","AINUR","DWARF","HOBBIT"]}},{"TEXT":{"IN":["son","daughter"]}},{"TEXT":"of"},{"ENT_TYPE":{"IN":["MAN","ELF","AINUR","DWARF","HOBBIT"]}}],"label":"RELATION"}

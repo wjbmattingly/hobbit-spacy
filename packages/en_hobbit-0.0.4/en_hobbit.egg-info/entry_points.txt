@@ -1,0 +1,2 @@
+[spacy_models]
+en_hobbit = en_hobbit
