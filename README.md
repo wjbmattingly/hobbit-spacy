@@ -1,3 +1,8 @@
+[![Hobbit spaCy on PyPI](https://img.shields.io/pypi/v/en-hobbit.svg)](https://pypi.org/project/en-hobbit/)
+![Stars](https://img.shields.io/github/stars/wjbmattingly/hobbit-spacy.svg?style=social)
+![Forks](https://img.shields.io/github/forks/wjbmattingly/hobbit-spacy.svg?style=social)
+
+
 # Hobbit spaCy: A spaCy Pipeline for Middle Earth Data
 
 ![Hobbit spaCy](images/hobbitspacy.png)
