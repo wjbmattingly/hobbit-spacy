@@ -1,0 +1,49 @@
+{
+  "lang":"en",
+  "name":"hobbit",
+  "version":"0.0.5",
+  "description":"This is a spaCy package for working with Middle Earth Data.",
+  "author":"W.J.B. Mattingly",
+  "email":"",
+  "url":"https://github.com/wjbmattingly/hobbit-spacy",
+  "license":"MIT",
+  "spacy_version":">=3.6.1,<3.7.0",
+  "spacy_git_version":"458bc5f45",
+  "vectors":{
+    "width":0,
+    "vectors":0,
+    "keys":0,
+    "name":null
+  },
+  "labels":{
+    "span_ruler":[
+      "AINUR",
+      "CVT",
+      "DWARF",
+      "ELF",
+      "HOBBIT",
+      "MAN",
+      "MOUNTAIN",
+      "REALM",
+      "RIVER",
+      "ROAD",
+      "WEAPON"
+    ]
+  },
+  "pipeline":[
+    "span_ruler",
+    "merge_spans",
+    "find_relations"
+  ],
+  "components":[
+    "span_ruler",
+    "merge_spans",
+    "find_relations"
+  ],
+  "disabled":[
+
+  ],
+  "requirements":[
+
+  ]
+}
