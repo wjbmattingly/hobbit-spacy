@@ -1,0 +1,16 @@
+build:
+  cmd: python -m spacy run build
+  script:
+    - python ./scripts/build_rules_pipeline.py 0.0.6
+  deps: []
+  outs: []
+  spacy_version: 3.4.4
+  spacy_git_version: 77833bfef
+package:
+  cmd: python -m spacy run package
+  script:
+    - python -m spacy package hobbit-spacy --code ./scripts/components.py packages
+  deps: []
+  outs: []
+  spacy_version: 3.4.4
+  spacy_git_version: 77833bfef

@@ -1,0 +1,45 @@
+title: "Hobbit spaCy Project"
+description: "A Project for Working with Middle Earth Data"
+
+# Variables can be referenced across the project.yml using ${vars.var_name}
+vars:
+  save_name: "hobbit-spacy"
+  components: "./scripts/components.py"
+  name: "hobbit"
+  lang: "en"
+  # train: "train.json"
+  # dev: "dev.json"
+  version: "0.0.6"
+  # Set a random seed
+  seed: 0
+  # Set your GPU ID, -1 is CPU
+  gpu_id: -1
+  # Vectors model for train-with-vectors
+  # vectors_model: "en_core_web_md"
+
+# These are the directories that the project needs. The project CLI will make
+# sure that they always exist.
+directories: ["assets", "corpus", "configs", "training", "scripts", "packages"]
+
+# Workflows are sequences of commands (see below) executed in order. You can
+# run them via "spacy project run [workflow]". If a commands's inputs/outputs
+# haven't changed, it won't be re-run.
+workflows:
+  all:
+    - build
+    - package
+
+# Project commands, specified in a style similar to CI config files (e.g. Azure
+# pipelines). The name is the command name that lets you trigger the command
+# via "spacy project run [command] [path]". The help message is optional and
+# shown when executing "spacy project run [optional command] [path] --help".
+commands:
+  - name: "build"
+    help: "Build the Rules-Based Pipeline"
+    script:
+      - "python ./scripts/build_rules_pipeline.py ${vars.version}"
+
+  - name: "package"
+    help: "Package the Pipeline"
+    script:
+      - "python -m spacy package ${vars.save_name} --code ${vars.components} packages"

@@ -3,7 +3,7 @@
 ![Forks](https://img.shields.io/github/forks/wjbmattingly/hobbit-spacy.svg?style=social)
 
 
-# Hobbit spaCy: A spaCy Pipeline for Middle Earth Data
+# 🪐 spaCy Project: Hobbit spaCy
 
 ![Hobbit spaCy](images/hobbitspacy.png)
 
@@ -87,12 +87,22 @@ Expected Output:
 
 ![Sample Output](images/sample-output.JPG)
 
-## Documentation
+### 🗂 Assets
 
+The following assets are defined by the project. They can
+be fetched by running [`spacy project assets`](https://spacy.io/api/cli#project-assets)
+in the project directory.
 
-## Contributing
-
-We welcome contributions!
+| File | Source | Description |
+| --- | --- | --- |
+| [`assets/train.json`](assets/cities.csv) | Local | Collection of Cities, Villages, and Towns (CVT) |
+| [`assets/dev.json`](assets/fps.txt) | Local | Collection of False Positives to Remove when Creating the Pipeline (i.e IV or I as a person) |
+| [`assets/train.json`](assets/mountain.txt) | Local | List of Mountains |
+| [`assets/train.json`](assets/names.csv) | Local | List of extra names to augment the online dataset |
+| [`assets/train.json`](assets/realm.txt) | List of realms in Middle Earth |
+| [`assets/train.json`](assets/river.txt) | Local | List of rivers in Middle Earth |
+| [`assets/train.json`](assets/road.txt) | Local | List of roads in Middle Earth |
+| [`assets/train.json`](assets/shire.csv) | Local | List of places connected to the Shire (CVT tag) |
 
 ## License
 
