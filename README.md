@@ -95,14 +95,14 @@ in the project directory.
 
 | File | Source | Description |
 | --- | --- | --- |
-| [`assets/train.json`](assets/cities.csv) | Local | Collection of Cities, Villages, and Towns (CVT) |
-| [`assets/dev.json`](assets/fps.txt) | Local | Collection of False Positives to Remove when Creating the Pipeline (i.e IV or I as a person) |
-| [`assets/train.json`](assets/mountain.txt) | Local | List of Mountains |
-| [`assets/train.json`](assets/names.csv) | Local | List of extra names to augment the online dataset |
-| [`assets/train.json`](assets/realm.txt) | List of realms in Middle Earth |
-| [`assets/train.json`](assets/river.txt) | Local | List of rivers in Middle Earth |
-| [`assets/train.json`](assets/road.txt) | Local | List of roads in Middle Earth |
-| [`assets/train.json`](assets/shire.csv) | Local | List of places connected to the Shire (CVT tag) |
+| [`assets/cities.csv`](assets/cities.csv) | Local | Collection of Cities, Villages, and Towns (CVT) |
+| [`assets/shire.csv`](assets/shire.csv) | Local | List of places connected to the Shire (CVT tag) |
+| [`assets/names.csv`](assets/names.csv) | Local | List of extra names to augment the online dataset |
+| [`assets/mountain.txt`](assets/mountain.txt) | Local | List of Mountains |
+| [`assets/realm.txt`](assets/realm.txt) | Local | List of realms in Middle Earth |
+| [`assets/river.txt`](assets/river.txt) | Local | List of rivers in Middle Earth |
+| [`assets/road.txt`](assets/road.txt) | Local | List of roads in Middle Earth |
+| [`assets/fps.txt`](assets/fps.txt) | Local | Collection of False Positives to Remove when Creating the Pipeline (i.e IV or I as a person) |
 
 ## License
 
